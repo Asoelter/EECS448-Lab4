@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title> Table </title>
+	</head>
+
+	<body>
+		<table style="width:100%">
+			<?php
+				for($x = 0; $x < 100; ++$x)
+				{
+					echo "<tr>" . " </tr>";
+
+					for($y = 0; $y < 100; ++$y)
+					{
+						if($x == 0)
+						{
+							echo "<td>" . $y . "</td>";
+						}
+						else
+						{
+							echo "<td>" . ( $x * $y ) . "</td>";
+						}
+					}
+				}
+			?>
+		</table>
+	</body>
+</html>
+
