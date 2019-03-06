@@ -6,22 +6,33 @@
 	<body>
 		<table style="width:100%">
 			<?php
-				for($x = 0; $x < 100; ++$x)
-				{
-					echo "<tr>" . " </tr>";
+				echo "<td>$nbsp</td>";
 
-					for($y = 0; $y < 100; ++$y)
+				for($x = 1; $x < 100; ++$x)
+				{
+					echo "<td>" . $x . "</td>";
+				}
+
+				echo "<tr>" . " </tr>";
+
+
+				for($x = 1; $x < 100; ++$x)
+				{
+					$iteration = 0;
+					for($y = 1; $y < 100; ++$y)
 					{
-						if($x == 0)
-						{
-							echo "<td>" . $y . "</td>";
-						}
-						else
+						if($iteration == 0)
 						{
 							echo "<td>" . ( $x * $y ) . "</td>";
 						}
+						++$iteration;
+
+						echo "<td>" . ( $x * $y ) . "</td>";
 					}
+
+					echo "<tr>" . " </tr>";
 				}
+				
 			?>
 		</table>
 	</body>
